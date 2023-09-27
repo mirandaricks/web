@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<!--Import Google Icon Font-->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!--Import materialize.css-->
+		<link rel="stylesheet" href="css/styles.css" />
+		<!-- Compiled and minified CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav>
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo">Logo</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="/">Home</a></li>
+					<li><a href="/equipaments">Equipamentos</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container">
+			<h1 class="center-align">Novo Equipamento</h1>
+			<div class="container">
+				<form action="/equipaments" method="post">
+					<div class="m3">
+						<div class="row">
+							<!-- data -->
+							<div class="input-field col s4">
+								<input
+									placeholder=""
+									id="data"
+									type="date"
+									class="validate"
+									pattern="dd/MM/yyyy"
+								/>
+								<label for="data">Data</label>
+							</div>
+							<!-- Mac -->
+							<div class="input-field col s4">
+								<input id="mac" type="text" class="validate" />
+								<label for="mac">Mac</label>
+							</div>
+							<div class="input-field col s4">
+								<input id="customer" type="text" class="validate" />
+								<label for="customer">Cliente</label>
+							</div>
+						</div>
+						<div class="row">
+							<!-- Equipament -->
+							<div class="input-field col s4">
+								<input id="equipament" type="text" class="validate" />
+								<label for="equipament">Equipamento</label>
+							</div>
+							<!-- Cause -->
+							<div class="input-field col s4">
+								<input id="cause" type="text" class="validate" />
+								<label for="cause">Motivo</label>
+							</div>
+							<!-- State -->
+							<div class="input-field col s4">
+								<input id="state" type="text" class="validate" />
+								<label for="state">Estado Físico</label>
+							</div>
+						</div>
+						<div class="row">
+							<!-- Técnico -->
+							<div class="input-field col s4">
+								<input id="technician" type="text" class="validate" />
+								<label for="technician">Técnico</label>
+							</div>
+							<!-- Cause -->
+							<div class="input-field col s8">
+								<input id="obs" type="text" class="validate" />
+								<label for="obs">Observação</label>
+							</div>
+						</div>
+					</div>
+					<div class="center-align">
+						<button type="submit" class="btn waves-effect waves-light teal">Save</button>
+						<a href="/equipaments" class="btn waves-effect waves-light yellow black-text">Cancel</a>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!--JavaScript at end of body for optimized loading-->
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	</body>
+</html>

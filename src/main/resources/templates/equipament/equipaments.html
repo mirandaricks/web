@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<!--Import Google Icon Font-->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!--Import materialize.css-->
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/materialize.min.css">
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<!-- Navbar -->
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a href="/equipaments">Equipamentos</a></li>
+        </ul>
+      </div>
+    </nav>
+		<div class="container">
+			<h1 class="center-align">Equipamentos</h1>
+		</div>
+		<div class="container">
+			<a href="/equipaments/new" class="btn btn-small indigo"><i class="material-icons small"></i>Novo</a>
+		</div>
+		<div>
+			<table class="centered striped highlight responsive-table">
+				<thead>
+					<tr >
+							<th>Data</th>
+							<th>Cliente</th>
+							<th>Mac</th>
+							<th>Equipamento</th>
+							<th>Motivo</th>
+							<th>Estado Físico</th>
+							<th>Técnico</th>
+							<th>Observação</th>
+							<th>Opções</th>
+
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr th:each="equipament : ${equipaments}">
+						<td th:text="${equipament.data_cad}">Eclair</td>
+						<td th:text="${equipament.customer}">Alvin</td>
+						<td th:text="${equipament.mac}">$0.87</td>
+						<td th:text="${equipament.product.name}">Alvin</td>
+						<td th:text="${equipament.cause.name}">Eclair</td>
+						<td th:text="${equipament.state.name}">$0.87</td>
+						<td th:text="${equipament.tech.name}">$0.87</td>
+						<td th:text="${equipament.obs}">$0.87</td>
+
+
+						<td>
+							<a href="#" class="btn btn-small yellow black-text"><i class="material-icons small">edit</i></a>
+							<a href="#" class="btn btn-small red"><i class="material-icons small">delete</i></a>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+		<!--JavaScript at end of body for optimized loading-->
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	</body>
+</html>

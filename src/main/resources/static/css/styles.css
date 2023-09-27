@@ -1,0 +1,40 @@
+
+        /* Estilo para o menu lateral fixo */
+        #sidenav {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            width: 250px;
+            background-color: #333;
+            padding-top: 60px;
+            transition: left 0.3s ease-in-out;
+        }
+
+        #sidenav a {
+            color: #fff;
+            padding: 15px;
+            display: block;
+        }
+
+        /* Estilo para o botão de abertura do menu */
+        #menu-toggle {
+            position: fixed;
+            left: 0;
+            top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Estilo para o conteúdo principal */
+        #main-content {
+            margin-left: 0;
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+        /* Estilo para o conteúdo quando o menu estiver aberto */
+        #main-content.open {
+            margin-left: 250px;
+        }
